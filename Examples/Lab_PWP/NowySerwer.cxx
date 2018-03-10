@@ -99,6 +99,7 @@ int main(int argc, char* argv[])
 
         // Receive generic header from the socket
         int r = socket->Receive(headerMsg->GetPackPointer(), headerMsg->GetPackSize());
+
         if (r == 0)
           {
           socket->CloseSocket();
@@ -377,7 +378,7 @@ int ReceivePoint(igtl::Socket * socket, igtl::MessageHeader * header)
       std::cerr << " Owner     : " << pointElement->GetOwner() << std::endl;
       std::cerr << "================================" << std::endl;
 	  	  
-	  igtl::Sleep(500);
+	  igtl::Sleep(550);
 
 	  pos[0] = -pos[0];
 	  pos[1] = -pos[1];
